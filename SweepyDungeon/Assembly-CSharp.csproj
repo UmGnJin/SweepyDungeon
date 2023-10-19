@@ -58,10 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ResolutionManager.cs" />
     <Compile Include="Assets\Scripts\Object\Thing.cs" />
-    <Compile Include="Assets\Scripts\util\Point.cs" />
     <Compile Include="Assets\Scripts\System\Player_Camera.cs" />
     <Compile Include="Assets\Scripts\Object\player\player.cs" />
-    <Compile Include="Assets\Scripts\util\Rect.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\Terrain.cs" />
   </ItemGroup>

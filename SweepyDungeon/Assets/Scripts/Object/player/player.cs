@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using ArcanaDungeon;
-using Terrain = ArcanaDungeon.Terrain;
+using Terrain = SweepyDungeon.Terrain;
 
 
 
-namespace ArcanaDungeon.Object
+namespace SweepyDungeon.Object
 {
     public class player : Thing
     {
@@ -71,7 +71,6 @@ namespace ArcanaDungeon.Object
             {
                 if (isturn_start) {
                     isturn_start = false;
-                    vision_marker();
                 }
                 if (MoveTimer <= 0)
                 {
@@ -82,7 +81,6 @@ namespace ArcanaDungeon.Object
                     spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
             }
             PlayerPos = new Vector2(Mathf.Round(transform.position.x - 1), Mathf.Round(transform.position.y));
-            vision_marker();//★이 2줄은 나중에 턴이 종료될 때 함수가 완성되면 그 쪽으로 옮겨야 함
             
         }
 
@@ -98,18 +96,7 @@ namespace ArcanaDungeon.Object
                 
             }
           
-            else if(MoveTimer <= 0 && isMouseMove == true)
-            {
-                
-                try //다음 층으로 이동하면 배열 인덱스 범위를 벗어났다는 오류가 뜬다, 아무래도 층을 이동하면서 route_pos에 문제가 생기는 것으로 보인다
-                {
-                    route_pos.RemoveAt(0);
-                    MoveTimer = MoveTimerLimit;
-                    this.Turnend();
-                }
-                catch (Exception e) { Debug.Log(e); }
-            }
-           
+            
 
         }
         private void Get_MouseInput()
@@ -127,7 +114,6 @@ namespace ArcanaDungeon.Object
                 //Debug.Log("SDF");
                 Mou_x = Mathf.RoundToInt(MousePos.x);
                 Mou_y = Mathf.RoundToInt(MousePos.y);
-                route_BFS(Mou_x, Mou_y);
                 
                 //Debug.Log("x = " + Mou_x +"("+ MousePos.x + ") y = " + Mou_y +"(" + MousePos.y + ")");
             }
@@ -154,42 +140,9 @@ namespace ArcanaDungeon.Object
         {
             PlayerPos = pos;
             transform.position = pos;
-            vision_marker();
         }// 특정 좌표로 소환
         
-        private void vision_marker()
-        {
-            FOV = new bool[Dungeon.dungeon.currentlevel.width, Dungeon.dungeon.currentlevel.height];
-            util.Visionchecker.vision_check((int)Mathf.Round(transform.position.x), (int)Mathf.Round(transform.position.y), this.vision_distance, FOV);
-
-
-            //프리팹의 RGB값은 0~1 범위로 나타내는 게 기본값같다
-            for (int i = 0; i < Dungeon.dungeon.currentlevel.width; i++)
-            {
-                for (int j = 0; j < Dungeon.dungeon.currentlevel.height; j++)
-                {
-                    if (FOV[i, j])
-                    {
-                        Dungeon.dungeon.currentlevel.temp_gameobjects[i, j].GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-                        Enemy temp_enem = Dungeon.dungeon.find_enemy(i, j);
-                        if ( temp_enem != null) {
-                            temp_enem.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-                            temp_enem.status_update();
-                        }
-                    }
-                    else
-                    {
-                        Dungeon.dungeon.currentlevel.temp_gameobjects[i, j].GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 1);
-                        Enemy temp_enem = Dungeon.dungeon.find_enemy(i, j);
-                        if (temp_enem != null)
-                        {
-                            temp_enem.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-                            temp_enem.status_hide();
-                        }
-                    }
-                }
-            }
-        }
+        
 
         public new void BlockChange(int val)
         {
@@ -208,11 +161,10 @@ namespace ArcanaDungeon.Object
                     this.block += val;
                 }
             }
-            UI.uicanvas.GaugeChange();
         }
         public override void die()
         {
-            UI.uicanvas.Gameover();
+
         }
     }
 }
