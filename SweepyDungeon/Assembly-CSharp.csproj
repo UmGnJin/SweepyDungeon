@@ -62,9 +62,8 @@
     <Compile Include="Assets\Scripts\System\Player_Camera.cs" />
     <Compile Include="Assets\Scripts\Object\player\player.cs" />
     <Compile Include="Assets\Scripts\util\Rect.cs" />
-    <Compile Include="Assets\Scripts\util\Visionchecker.cs" />
-    <Compile Include="Assets\Scripts\Terrain.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
+    <Compile Include="Assets\Scripts\Terrain.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\condition_tooltip.txt" />

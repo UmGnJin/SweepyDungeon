@@ -7,6 +7,7 @@ namespace SweepyDungeon
     public class BoardManager : MonoBehaviour
     {
         public int[,,] board;
+        public int boardSize;
         public double enemySpawnRate = 0.2;
         public double itemSpawnRate = 0.2;
 
@@ -40,8 +41,30 @@ namespace SweepyDungeon
 
             int enemySpawnCount = (int)(size * size * enemySpawnRate);
             int itemSpawnCount = (int)(size * size * itemSpawnRate);
-
+            boardSize = size;
             //
+        }
+
+        public void SetUINumber()
+        {
+            for (int i = 0; i < boardSize; i++)
+            {
+                for (int j = 0; j < boardSize; j++)
+                {
+                    /*if(i != 0)
+                    {
+                        if()
+                        {
+
+                        }
+                    }
+                    if(i + 1 = boardSize)
+                    {
+
+                    }*/
+
+                }
+            }
         }
     }
 }
