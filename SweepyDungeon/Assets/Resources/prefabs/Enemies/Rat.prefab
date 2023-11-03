@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7822771559192858028}
   - component: {fileID: 1139519099754044936}
-  - component: {fileID: 7424922315262478536}
   - component: {fileID: 8327231896752594969}
   m_Layer: 9
   m_Name: Rat
@@ -72,9 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -5237074582503671387, guid: a10c10ad8cd89ba4f8aecfee1101080d,
-    type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -5237074582503671387, guid: a10c10ad8cd89ba4f8aecfee1101080d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,27 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7424922315262478536
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4620959192706698618}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &8327231896752594969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,15 +92,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4620959192706698618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004289d27d7835143ad5fb821da8dbe5, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e2e106da376fac429fd1751f349f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 100
-  maxstamina: 100
-  power: 0
-  exhausted: 0
-  isTurn: 0
-  route_pos: 
-  name: 
-  maxcooltime: 0
-  taljin: {fileID: 5055103388082806182, guid: 7293fa48061cbb74facc742efb6436a0, type: 3}
+  x: 0
+  y: 0

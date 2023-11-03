@@ -71,9 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -458641133534639524, guid: 39bdcf9c447593541b6e6a2e68a84920,
-    type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -458641133534639524, guid: 39bdcf9c447593541b6e6a2e68a84920, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,17 +92,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382149270716704589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e86ab205ae99c9845a56a01f7ecea7ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e2e106da376fac429fd1751f349f413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 300
-  maxstamina: 100
-  power: 0
-  exhausted: 0
-  isTurn: 0
-  route_pos: 
-  name: 
-  maxcooltime: 0
-  poisontile: {fileID: 7699061077899021885, guid: 896d4c7cd3f69f44d9bcde71fa3d7b07,
-    type: 3}
-  taljin: {fileID: 5055103388082806182, guid: 7293fa48061cbb74facc742efb6436a0, type: 3}
+  x: 0
+  y: 0

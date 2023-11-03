@@ -74,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 5327627343581010394, guid: 502b9541af915424080ff072d5bc528a,
-    type: 3}
+  m_Sprite: {fileID: 5327627343581010394, guid: 502b9541af915424080ff072d5bc528a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,24 +113,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096753644826888910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be2a3f4aa6a8244388d1d3372c8a02f, type: 3}
+  m_Script: {fileID: 11500000, guid: 52d75746a02c25e428a2b7e257261093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTurn: 0
-  route_pos: 
-  name: 
-  me: {fileID: 0}
-  MovePower: 0.2
-  MoveTimerLimit: 5
-  spriteRenderer: {fileID: 0}
-  anim: {fileID: 0}
-  rigid: {fileID: 6235038728448055972}
-  tr: {fileID: 0}
-  movement: {x: 0, y: 0, z: 0}
-  PlayerPos: {x: 21, y: -29}
-  MoveVector: {x: 0, y: 0}
-  MousePos: {x: 0, y: 0}
-  MoveTimer: 0
+  x: 0
+  y: 0
+  numberObject: {fileID: 0}
+  hp: 0
+  coin: 0
+  nearbyObjects: 0
+  nearbyEnemies: 0
 --- !u!50 &6235038728448055972
 Rigidbody2D:
   serializedVersion: 4

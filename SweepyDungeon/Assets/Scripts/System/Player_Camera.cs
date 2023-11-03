@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ArcanaDungeon
+namespace SweepyDungeon
 {
     public class Player_Camera : MonoBehaviour
     {
@@ -15,7 +15,8 @@ namespace ArcanaDungeon
         {
             if (Player == null)
                 Player = GameObject.FindWithTag("Player");
-            this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+            else
+                this.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
         }
     }
 }

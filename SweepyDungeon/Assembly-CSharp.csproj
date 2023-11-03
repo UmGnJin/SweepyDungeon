@@ -57,11 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ResolutionManager.cs" />
-    <Compile Include="Assets\Scripts\Object\Thing.cs" />
+    <Compile Include="Assets\Scripts\Object\Entity.cs" />
     <Compile Include="Assets\Scripts\System\Player_Camera.cs" />
-    <Compile Include="Assets\Scripts\Object\player\player.cs" />
+    <Compile Include="Assets\Scripts\Object.cs" />
+    <Compile Include="Assets\Scripts\Object\Heart.cs" />
+    <Compile Include="Assets\Scripts\Object\Player.cs" />
+    <Compile Include="Assets\Scripts\Object\Coin.cs" />
+    <Compile Include="Assets\Scripts\Object\Enemy.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\Terrain.cs" />
+    <Compile Include="Assets\Scripts\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\condition_tooltip.txt" />
